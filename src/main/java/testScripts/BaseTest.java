@@ -1,15 +1,13 @@
 package testScripts;
 
- 
 import java.util.concurrent.TimeUnit;
 
- 
 import org.openqa.selenium.WebDriver;
- 
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
- 
+
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -46,6 +44,8 @@ public class BaseTest {
 			driver.navigate().to("https://www.amazon.in/");
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		}
+
+		driver.manage().window().fullscreen();
 	}
 
 	// @AfterSuite
