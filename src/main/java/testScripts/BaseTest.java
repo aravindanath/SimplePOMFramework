@@ -19,7 +19,7 @@ public class BaseTest {
 	@BeforeClass
 
 	public void launchBrowser() {
-		String browser = "Chrome";
+		String browser = "FireFox";
 		if (browser.equals("FireFox")) {
 
 			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "./Output/firefox.log");

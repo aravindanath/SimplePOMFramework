@@ -20,7 +20,7 @@ public class AM_Login_001 extends BaseTest {
 		lp.login("automationclass2018@gmail.com", "auto2018");
 
 		HomePage hp = new HomePage(driver);
-		hp.searchProduct("iphone 7");
+		hp.searchProduct("AM_HM01");
 
 		ProductPage pp = new ProductPage(driver);
 		pp.productDiscription();
