@@ -30,7 +30,6 @@ public class LoginPage extends BasePage {
 
 	@FindBy(xpath = "//a/span")
 	private WebElement needHelp;
- 
 
 	@FindAll(@FindBy(xpath = "//*[@alt='Honor Play']"))
 	private List<WebElement> em;
@@ -76,14 +75,15 @@ public class LoginPage extends BasePage {
 	protected HashMap<String, String> lp;
 
 	public void login(String loginVal) throws InterruptedException {
-		lp = JavaUtils.readExcelData("LOGIN", loginVal);
+		lp = JavaUtils.readExcelData("Login", loginVal);
 		signIn.click();
+		
 		String expected = driver.getTitle();
-		assertPageTitle(expected, "Amazon Sign In");
-		amazonEmail.sendKeys(lp.get("USERNAME"));
-		continueBtn.click();
+		assertPageTitle(expected, "Amazon Sign In"); 
+		amazonEmail.sendKeys(lp.get("USERNAME")); continueBtn.click();
 		passwordTxt.sendKeys(lp.get("PASSWORD"), Keys.ENTER);
 	}
+
 
 	/**
 	 * 
@@ -102,7 +102,7 @@ public class LoginPage extends BasePage {
 	}
 
 	public void dummy() {
-	 em.get(2).click();
+		em.get(2).click();
 		signIn.click();
 		createAccountSubmit.click();
 	}
