@@ -35,7 +35,7 @@ public class LoginPage extends BasePage {
 	private List<WebElement> em;
 
 	// @FindBy(id = "//*[@id=\"nav-link-yourAccount\"]/span[1]")
-	@FindBy(xpath = "//*[text()='Hello, Sign in']")
+	@FindBy(xpath = "//*[contains(text(),'Hello. Sign in') or contains(text(),'Hello, Sign in')]")
 	private WebElement signIn;
 
 	@FindBy(id = "ap_email")
